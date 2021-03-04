@@ -1,0 +1,30 @@
+{
+    "name": "webgl-loader",
+    "version": "0.1.0",
+    "description": "Webpack loader for GL ES (WebGL).",
+    "private": false,
+    "main": "index.js",
+    "license": "MIT",
+    "keywords": [
+        "Webpack",
+        "loader",
+        "WebGL",
+        "GLES"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/jla-/webgl-loader.git"
+    },
+    "bugs": {
+        "url": "https://gitlab.com/jla-/webgl-loader/-/issues"
+    },
+    "homepage": "https://gitlab.com/jla-/webgl-loader",
+    "dependencies": {
+        "path": "^0.12"
+    },
+    "devDependencies": {},
+    "engines": {
+        "node": ">= 14.0.0",
+        "npm": ">= 6.0.0"
+    }
+}
