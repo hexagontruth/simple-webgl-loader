@@ -67,12 +67,13 @@ if ( !gl.getShaderParameter( frag, gl.COMPILE_STATUS ) ) {
 
 ## Output
 
-The loader performs some basic optimisations, and returns the shader code as a single string reader for compilation. The process boils down to:
+The loader performs some basic optimisations, and returns the shader code as a single string ready for WebGL compilation. The process boils down to:
 
- - `#include` directive files are merged
- - Unnecessary whitespace is collapsed
- - Comments are removed
- - Semi-colons are automatically added/removed from line endings where appropriate
+ - `#include` directive files are merged.
+ - Unnecessary whitespace is collapsed.
+ - Comments are removed.
+ - Numbers of the form `1.0` are converted to `1.`.
+ - Semi-colons are automatically added/removed from line endings where appropriate.
 
 For example, the following shader code would be compiled to:
 
@@ -100,5 +101,5 @@ void main() {
 ```
 
 ```js
-"#ifdef GL_ES\nprecision highp float;\n#endif\nuniform vec3 lightDirection;\nuniform float ambientLight;\nuniform sampler2D albedo;\nvarying vec3 vNormal;\nvarying vec2 vUv;\nvoid main(){\nvec3 gray=vec3(0.4,0.4,0.4);\nvec3 tAlbedo=texture2D(albedo,vUv).rgb;\nfloat lightness=-clamp(dot(normalize(vNormal),normalize(lightDirection)),-1.0,0.0);\nlightness=ambientLight+(1.0-ambientLight)*lightness;\ngl_FragColor=vec4(tAlbedo*lightness,1.0);\n}"
+"#ifdef GL_ES\nprecision highp float;\n#endif\nuniform vec3 lightDirection;\nuniform float ambientLight;\nuniform sampler2D albedo;\nvarying vec3 vNormal;\nvarying vec2 vUv;\nvoid main(){\nvec3 gray=vec3(0.4,0.4,0.4);\nvec3 tAlbedo=texture2D(albedo,vUv).rgb;\nfloat lightness=-clamp(dot(normalize(vNormal),normalize(lightDirection)),-1.,0.);\nlightness=ambientLight+(1.-ambientLight)*lightness;\ngl_FragColor=vec4(tAlbedo*lightness,1.);\n}"
 ```
