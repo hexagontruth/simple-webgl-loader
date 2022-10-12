@@ -5,6 +5,9 @@ function parse( source, p ) {
     // UNIX line endings
     source = source.replace( /\r/g, '\n' )
 
+    // Remove all comments
+    source = source.replace( /\/\*[\s\S]*?\*\/|\/\/.*/g, '\n' )
+
     // Collapse whitespace with newlines into one newline
     source = source.replace( /(\s*\n\s*)+/g, '\n' )
 
@@ -41,9 +44,6 @@ function parse( source, p ) {
     source = source.replace( /\s*\-\-\s*/g, '--' )
     source = source.replace( /\s*,\s*/g, ',' )
     source = source.replace( /\s*;\s*/g, ';\n' )
-
-    // Remove all comments
-    source = source.replace( /\/\*[\s\S]*?\*\/|\/\/.*/g, '\n' )
 
     // Collapse multiple newlines into one newline, and multiple spaces into one space
     source = source.replace( /(\s*\n\s*)+/g, '\n' )
