@@ -1,4 +1,4 @@
-# Some WebGL ES loader for Webpack
+# Webpack loader for WebGL shaders
 
 A Webpack loader for GLSL ES shaders based on James Armitage's [webgl-loader](https://gitlab.com/jla-/webgl-loader), published under the MIT license. Much of this README is copied verbatim from there.
 
@@ -26,7 +26,7 @@ The `#include ...` directive is not scoped &mdash; it simply takes the contents 
 
 If your main function is in `main.fs`, and you have a function in another file called `parallax_uv.fs`, then your shader code would look like this:
 
-#### main.frag:
+#### main.fs:
 
 ```
 precision highp float;
@@ -39,7 +39,7 @@ void main()
 }
 ```
 
-#### parallax_uv.frag:
+#### parallax_uv.fs:
 
 ```
 vec2 parallax_uv( vec2 uv, vec3 view_dir )
@@ -52,8 +52,7 @@ vec2 parallax_uv( vec2 uv, vec3 view_dir )
 ### In your JavaScript:
 
 ```js
-import fragSrc from '../shaders/main.frag'
-
+import fragSrc from '../shaders/main.fs'
 ...
 const gl = canvas.getContext( 'webgl' )
 ...

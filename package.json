@@ -1,6 +1,6 @@
 {
   "name": "simple-webgl-loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Webpack loader for WebGL (GLSL ES) shader files",
   "private": false,
   "main": "index.js",
