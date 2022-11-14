@@ -66,7 +66,7 @@ if ( !gl.getShaderParameter( frag, gl.COMPILE_STATUS ) ) {
 
 ## Output
 
-The loader performs some basic optimisations, and returns the shader code as a single string ready for WebGL compilation. The process boils down to:
+The loader performs some basic optimizations, and returns the shader code as a single string ready for WebGL compilation. The process boils down to:
 
  - `#include` directive files are merged
  - Unnecessary whitespace is collapsed
