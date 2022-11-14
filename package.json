@@ -1,27 +1,27 @@
 {
-    "name": "webgl-loader",
-    "version": "0.1.1",
-    "description": "Webpack loader for GL ES (WebGL).",
-    "private": false,
-    "main": "index.js",
-    "license": "MIT",
-    "keywords": [
-        "Webpack",
-        "loader",
-        "WebGL",
-        "GLES"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://gitlab.com/jla-/webgl-loader.git"
-    },
-    "bugs": {
-        "url": "https://gitlab.com/jla-/webgl-loader/-/issues"
-    },
-    "homepage": "https://gitlab.com/jla-/webgl-loader",
-    "devDependencies": {},
-    "engines": {
-        "node": ">= 14.0.0",
-        "npm": ">= 6.0.0"
-    }
+  "name": "webgl-loader",
+  "version": "0.2.0",
+  "description": "Webpack loader for GL ES (WebGL).",
+  "private": false,
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "loader",
+    "gles",
+    "glsles",
+    "webgl",
+    "webgl2",
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexagontruth/simple-webgl-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/hexagontruth/simple-webgl-loader/issues"
+  },
+  "homepage": "https://github.com/hexagontruth/simple-webgl-loader",
+  "engines": {
+    "node": ">= 8.0.0"
+  }
 }
